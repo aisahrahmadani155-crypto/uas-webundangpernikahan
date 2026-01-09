@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f6f2;
+  color: #3b3b3b;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("bg.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle {
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.date {
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #c8a24a;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* OPENING */
+.opening {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.opening h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+/* COUPLE */
+.couple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.person h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.and {
+  font-size: 2.5rem;
+  color: #c8a24a;
+}
+
+/* EVENT */
+.event {
+  background: white;
+  margin: 60px auto;
+  padding: 40px;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.event h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.btn-outline {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: 1px solid #c8a24a;
+  color: #c8a24a;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background: #3b3b3b;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* MUSIC BUTTON */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c8a24a;
+  color: white;
+  font-size: 22px;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: spin 4s linear infinite;
+  z-index: 999;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .couple {
+    flex-direction: column;
+  }
+}
+/* GALLERY */
+.gallery {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f6f2;
+}
+
+.gallery h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.gallery-desc {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* GIFT */
+.gift {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f7f7;
+}
+
+.gift h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.gift-desc {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.gift-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.gift-card {
+  background: #ecc577;
+  padding: 30px;
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* WISHES */
+.wishes {
+  padding: 80px 20px;
+  background: #f8f6f2;
+  text-align: center;
+}
+
+.wishes h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.wishes-desc {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.wish-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wish-form input,
+.wish-form textarea {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wish-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.wish-form button {
+  background: #c8a24a;
+  color: rgb(236, 235, 234);
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ======================
+   AYAT AL-QURAN GOLD
+====================== */
+
+.ayat-gold {
+  padding: 100px 20px;
+  background: linear-gradient(
+    135deg,
+    #2e1f14,
+    #5b3c23,
+    #c8a24a
+  );
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.ayat-box {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  padding: 50px 35px;
+  border: 1px solid rgba(255, 215, 160, 0.35);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+}
+
+.ayat-box h2 {
+  font-family: 'Playfair Display', serif;
+  color: #f5e6c8;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.ayat-arab {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #fff;
+  margin-bottom: 25px;
+  font-family: 'Amiri', serif;
+}
+
+.ayat-arti {
+  font-size: 0.95rem;
+  line-height: 1.7rem;
+  color: #f1e7d6;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ayat-arab {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+
+  .ayat-box {
+    padding: 35px 20px;
+  }
+}
+
+/* ======================
+   ANIMASI BUNGA JATUH
+====================== */
+
+.flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.flowers span {
+  position: absolute;
+  display: block;
+  top: -10%;
+  font-size: 24px;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+/* Posisi & durasi berbeda */
+.flowers span:nth-child(1) {
+  left: 10%;
+  animation-duration: 15s;
+}
+.flowers span:nth-child(2) {
+  left: 25%;
+  animation-duration: 18s;
+  font-size: 20px;
+}
+.flowers span:nth-child(3) {
+  left: 40%;
+  animation-duration: 20s;
+}
+.flowers span:nth-child(4) {
+  left: 60%;
+  animation-duration: 17s;
+  font-size: 22px;
+}
+.flowers span:nth-child(5) {
+  left: 75%;
+  animation-duration: 19s;
+}
+.flowers span:nth-child(6) {
+  left: 90%;
+  animation-duration: 16s;
+  font-size: 26px;
+}
+
+/* Animasi jatuh */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* SCROLL ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAMA PENERIMA */
+.recipient {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #f5e6c8;
+}
+
+#guest-name {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #eeede9;
+}
+
